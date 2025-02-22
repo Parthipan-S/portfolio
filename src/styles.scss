@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: sans-serif;
+  }
+  
+  /* Dark Mode */
+  body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Add styles for Material components to match themes */
+  body.dark-theme .mat-toolbar {
+    background: mediumaquamarine;
+    color: #000000;
+  }
+  
+  body .mat-toolbar {
+    background: mediumaquamarine;
+    color: #000000;
+  }
+
+  body.dark-theme .mat-card {
+    background: #000000;
+  }
+
+  body.dark-theme .highlighter {
+    background: mediumaquamarine;
+    color: #000000;
+    border-radius: 6px;
+    padding: 6px;
+  }
+  
+  body .highlighter {
+    background: mediumaquamarine;
+    color: #000000;
+    border-radius: 6px;
+    padding: 6px;
+  }
+  body .header {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+  }

@@ -1,0 +1,12 @@
+<div class="mt-[2%] p-4">
+    <h1 class="text-2xl sm:text-4xl  font-bold highlighter header">INTERESTS</h1>
+    <div class="mt-[1%] mx-[4%]">
+        <p>Apart from being a web developer, I am interested on 3d modelling and 3d printing.</p>
+        <p class="mb-3"> I have designed, modelled and printed prototypes and decors. I have attached few models below</p>
+        <p>When forced indoors, I follow a number of sci-fi and fantasy genre movies, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+    </div>
+<div *ngFor="let modelFile of modelFiles">
+    <app-model-viewer class="flex justify-center mb-2" [modelFile]="modelFile.path"></app-model-viewer>
+    <p class="flex justify-center font-bold">{{modelFile.name}}</p>
+</div>
+</div>
