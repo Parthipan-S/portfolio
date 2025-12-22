@@ -1,0 +1,98 @@
+.section-card {
+  margin: 20px;
+  padding: 20px;
+}
+.home-section-card {
+  margin: 20px;
+  padding: 20px;
+  background-color: black;
+}
+.home-section-card video {
+  height: 400px;
+}
+.product-section-card {
+  padding: 20px;
+}
+.product-right-section {
+  position: absolute;
+  top: 2%;
+}
+.order-btn {
+  width: 100%;
+  bottom: 12%;
+  right: 0px;
+  background-color: goldenrod !important;
+  border-radius: 20px;
+  font-size: 10px;
+}
+.product-video {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  left: -20px;
+}
+.order-btn-section {
+  bottom: 12%;
+}
+.img-btn {
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 4px;
+}
+.divider {
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 1px goldenrod;
+}
+.location-section {
+  border: solid 2px goldenrod;
+  border-radius: 40px;
+  padding: 6px;
+  color: white;
+  margin-bottom: 6px;
+}
+.location-section:hover {
+  border: solid 2px goldenrod;
+  border-radius: 40px;
+  padding: 6px;
+  margin-bottom: 6px;
+  color: black;
+  background-color: goldenrod;
+}
+.contact-img {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+@media screen and (max-width: 390px) and (min-width: 300px) {
+  .product-right-section {
+    position: relative;
+    top: 0%;
+  }
+}
+@media screen and (max-width: 400px) and (min-width: 390px) {
+  .concept-txt {
+    position: relative;
+    top: 0px;
+  }
+}
+@media screen and (max-width: 410px) and (min-width: 400px) {
+  .concept-txt {
+    position: relative;
+    top: 8px;
+  }
+}
+@media screen and (max-width: 430px) and (min-width: 410px) {
+  .concept-txt {
+    position: relative;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 450px) and (min-width: 430px) {
+  .concept-txt {
+    position: relative;
+    top: 12px;
+  }
+}

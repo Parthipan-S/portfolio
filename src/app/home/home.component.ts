@@ -1,29 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
-import { ProfileSectionComponent } from '../profile-section/profile-section.component';
-import { ExperienceSectionComponent } from '../experience-section/experience-section.component';
-import {MatDividerModule} from '@angular/material/divider';
-import { SkillsSectionComponent } from '../skills-section/skills-section.component';
-import { HobbySectionComponent } from '../hobby-section/hobby-section.component';
-import { AchievementsComponent } from '../achievements/achievements.component';
-
+import { SectionsComponent } from "../sections/sections.component";
+import { MatDividerModule } from "@angular/material/divider";
+import { ContactComponent } from "../contact/contact.component";
 @Component({
-  selector: 'app-home',
+  selector: "app-home",
   standalone: true,
-  imports: [NavBarComponent, ProfileSectionComponent, ExperienceSectionComponent, SkillsSectionComponent , HobbySectionComponent, AchievementsComponent, MatDividerModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  imports: [
+    NavBarComponent,
+    SectionsComponent,
+    MatDividerModule,
+    ContactComponent,
+  ],
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
 })
-export class HomeComponent {
-  isDarkMode: boolean = false
+export class HomeComponent implements OnInit {
+  isDarkMode: boolean = true;
+
+  ngOnInit() {
+    this.applyTheme();
+  }
 
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
+    this.applyTheme();
+  }
+
+  private applyTheme() {
     const body = document.body;
     if (this.isDarkMode) {
-      body.classList.add('dark-theme');
+      body.classList.add("dark-theme");
     } else {
-      body.classList.remove('dark-theme');
+      body.classList.remove("dark-theme");
     }
   }
 }

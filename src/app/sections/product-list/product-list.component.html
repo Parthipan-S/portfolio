@@ -1,0 +1,48 @@
+<div class="product-image-viewer">
+  <div class="flex justify-end" (click)="close()">
+    <mat-icon>close</mat-icon>
+  </div>
+
+  <div class="image-carousel" *ngIf="images.length; else noImages">
+    <button
+      class="nav-btn left-0"
+      mat-icon-button
+      (click)="prev()"
+      [disabled]="currentIndex === 0"
+    >
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+
+    <div
+      class="image-wrapper"
+      (touchstart)="onTouchStart($event)"
+      (touchmove)="onTouchMove($event)"
+      (touchend)="onTouchEnd()"
+    >
+      <img
+        [src]="images[currentIndex]"
+        alt="Image {{ currentIndex + 1 }}"
+        draggable="false"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+
+    <button
+      class="nav-btn right-0"
+      mat-icon-button
+      (click)="next()"
+      [disabled]="currentIndex === images.length - 1"
+    >
+      <mat-icon>arrow_forward_ios</mat-icon>
+    </button>
+
+    <div class="flex justify-center">
+      {{ currentIndex + 1 }} / {{ images.length }}
+    </div>
+  </div>
+
+  <ng-template #noImages>
+    <div class="no-images">No images available.</div>
+  </ng-template>
+</div>

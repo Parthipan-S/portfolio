@@ -1,0 +1,20 @@
+.contact-img {
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+}
+.location-section {
+  border: solid 2px goldenrod;
+  border-radius: 40px;
+  padding: 6px;
+  color: white;
+  font-size: 9px;
+}
+.location-section:hover {
+  border: solid 2px goldenrod;
+  border-radius: 40px;
+  padding: 6px;
+  color: black;
+  background-color: goldenrod;
+  font-size: 9px;
+}

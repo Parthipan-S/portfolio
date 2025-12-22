@@ -3,47 +3,61 @@
 @tailwind components;
 @tailwind utilities;
 
+$bg-color: #000000;
+$text-color: #ffffff;
+
+$bg2-color: #dceaf4;
+$nav-color: #000000;
+$nav-text: #f1fcfd;
 body {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: sans-serif;
-  }
-  
-  /* Dark Mode */
-  body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  /* Add styles for Material components to match themes */
-  body.dark-theme .mat-toolbar {
-    background: mediumaquamarine;
-    color: #000000;
-  }
-  
-  body .mat-toolbar {
-    background: mediumaquamarine;
-    color: #000000;
-  }
+  background-color: #ffffff;
+  color: #000000;
+  font-family: sans-serif;
+}
 
-  body.dark-theme .mat-card {
-    background: #000000;
-  }
+/* Dark Mode */
+body.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
 
-  body.dark-theme .highlighter {
-    background: mediumaquamarine;
-    color: #000000;
-    border-radius: 6px;
-    padding: 6px;
-  }
-  
-  body .highlighter {
-    background: mediumaquamarine;
-    color: #000000;
-    border-radius: 6px;
-    padding: 6px;
-  }
-  body .header {
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1px;
-  }
+/* Add styles for Material components to match themes */
+body.dark-theme .mat-toolbar {
+  background: $nav-color;
+  color: $nav-text;
+}
+
+body .mat-toolbar {
+  background: $nav-color;
+  color: $nav-text;
+}
+
+body.dark-theme .mat-card {
+  background: #000000;
+}
+
+body.dark-theme .highlighter {
+  background: $bg-color;
+  color: $text-color;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+body .highlighter {
+  background: $bg-color;
+  color: $text-color;
+  border-radius: 6px;
+  padding: 6px;
+}
+body .header {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+}
+.custom-dialog-panel .mdc-dialog__surface {
+  background-color: black !important;
+}
+.divider {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  border: solid 1px goldenrod;
+}
